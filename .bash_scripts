@@ -1,0 +1,25 @@
+#!/bin/bash
+
+function code () {
+  tmux has-session -t $1 2>/dev/null
+
+  if [[ -n "${TMUX}" && $? = 0 ]]; then
+    tmux switch -t $1
+  elif [[ -n "${TMUX}" && $? != 0 ]]; then
+    tmux new-session -s $1 -d && tmux switch -t $1 \; \
+      split-window -v -p 25 \; \
+      select-pane -t 0 \; \
+      split-window -h \; \
+      select-pane -t 0 \;
+  else
+    tmux new-session -A -s $1
+  fi
+}
+
+function cl () {
+  cd "$@" && la
+}
+
+function ws () {
+  cd ~/ws/"$@" && la
+}

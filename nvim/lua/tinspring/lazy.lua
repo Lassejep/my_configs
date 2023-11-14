@@ -43,5 +43,6 @@ require("lazy").setup({
   'theprimeagen/harpoon',
   'mbbill/undotree',
   'tpope/vim-fugitive',
-  'github/copilot.vim'
+  'github/copilot.vim',
+  'epwalsh/obsidian.nvim'
 })

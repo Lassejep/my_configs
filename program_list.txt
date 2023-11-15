@@ -17,6 +17,7 @@ cmake
 htop
 npm
 zathura
+iftop
 
 ---
 GIT:

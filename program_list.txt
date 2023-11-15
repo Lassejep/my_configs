@@ -1,0 +1,26 @@
+---
+PACMAN:
+---
+git
+github-cli
+neovim
+tmux
+obsidian
+firefox
+discord
+thunderbird
+ripgrep
+wl-copy
+
+---
+GIT:
+---
+yay
+my-configs
+Headsetcontrol
+Headset charge indicator
+
+---
+YAY:
+---
+geforce now

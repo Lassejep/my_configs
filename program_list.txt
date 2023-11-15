@@ -10,12 +10,17 @@ firefox
 discord
 thunderbird
 ripgrep
-wl-copy
+wl-clipboard
+yay
+alsa-utils
+cmake
+htop
+npm
+zathura
 
 ---
 GIT:
 ---
-yay
 my-configs
 Headsetcontrol
 Headset charge indicator
@@ -23,4 +28,4 @@ Headset charge indicator
 ---
 YAY:
 ---
-geforce now
+geforcenow-electron

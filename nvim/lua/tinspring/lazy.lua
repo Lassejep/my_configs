@@ -44,5 +44,6 @@ require("lazy").setup({
   'mbbill/undotree',
   'tpope/vim-fugitive',
   'github/copilot.vim',
-  'epwalsh/obsidian.nvim'
+  'epwalsh/obsidian.nvim',
+  'christoomey/vim-tmux-navigator',
 })

@@ -6,11 +6,7 @@ function code () {
   if [[ -n "${TMUX}" && $? = 0 ]]; then
     tmux switch -t $1
   elif [[ -n "${TMUX}" && $? != 0 ]]; then
-    tmux new-session -s $1 -d && tmux switch -t $1 \; \
-      split-window -v -p 25 \; \
-      select-pane -t 1 \; \
-      split-window -h \; \
-      select-pane -t 1 \;
+    tmux new-session -s $1 -d && tmux switch -t $1
   else
     tmux new-session -A -s $1
   fi

@@ -21,10 +21,6 @@ require("lazy").setup({
     build = ':TSUpdate'
   },
   {
-    'catppuccin/nvim',
-    as = 'catppuccin'
-  },
-  {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v3.x',
     lazy = true,
@@ -46,4 +42,6 @@ require("lazy").setup({
   'github/copilot.vim',
   'epwalsh/obsidian.nvim',
   'christoomey/vim-tmux-navigator',
+  'williamboman/mason.nvim',
+  'dylanaraps/wal.vim',
 })

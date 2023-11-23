@@ -15,12 +15,10 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- paste without overwriting vim paste register
-vim.keymap.set("x", "<leader>p", [["_dP]])
+vim.keymap.set("x", "p", [["+P]])
 -- paste from system clipboard
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>Y", [["+Y]])
--- delete into vim paste register
-vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "y", [["+y]])
+vim.keymap.set("n", "Y", [["+Y]])
 
 -- never press Q
 vim.keymap.set("n", "Q", "<nop>")

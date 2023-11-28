@@ -43,5 +43,5 @@ require("lazy").setup({
   'epwalsh/obsidian.nvim',
   'christoomey/vim-tmux-navigator',
   'williamboman/mason.nvim',
-  'dylanaraps/wal.vim',
+  'AlphaTechnolog/pywal.nvim',
 })

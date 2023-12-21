@@ -44,4 +44,5 @@ require("lazy").setup({
   'christoomey/vim-tmux-navigator',
   'williamboman/mason.nvim',
   'AlphaTechnolog/pywal.nvim',
+  'Aasim-A/scrollEOF.nvim',
 })

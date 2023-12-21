@@ -17,7 +17,7 @@ if [ ! -d /etc/sddm.conf.d/ ]; then
     echo "Folder /etc/sddm.conf.d created."
 fi
 
-sudo cp sddm.conf /etc/sddm.conf.d/
+sudo cp ~/git/my_configs/sddm/sddm.conf /etc/sddm.conf.d/
 echo "File /etc/sddm.conf.d/sddm.conf updated."
 
 if [ ! -d /usr/share/sddm/themes/sugar-dark/Backgrounds/ ]; then
@@ -28,7 +28,7 @@ fi
 sudo cp ~/.cache/current_wallpaper.jpg /usr/share/sddm/themes/sugar-dark/Backgrounds/
 echo "Current wallpaper copied into /usr/share/sddm/themes/sugar-dark/Backgrounds/"
 
-sudo cp theme.conf /usr/share/sddm/themes/sugar-dark/
+sudo cp ~/git/my_configs/sddm/theme.conf /usr/share/sddm/themes/sugar-dark/
 echo "File theme.conf updated in /usr/share/sddm/themes/sugar-dark/"
 
 echo ""

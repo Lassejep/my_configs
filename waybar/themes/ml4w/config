@@ -51,7 +51,6 @@
         "custom/updates",
         "pulseaudio",
         "group/hardware",
-        "network",
         "custom/exit",
         "clock"
     ],

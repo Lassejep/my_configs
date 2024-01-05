@@ -1,15 +1,28 @@
 require("obsidian").setup({
-  lazy = true,
-  event = {
-    "BufReadPre /home/tinspring/ws/notes/notes/**.md",
-    "BufNewFile /home/tinspring/ws/notes/notes/**.md",
-  },
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-  },
-  opts = {
-    open_app_foreground = true,
-  },
+    lazy = true,
+    ft = "markdown",
+
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+    },
+
+    workspaces = {
+        {
+            name = "notes",
+            path = "~/ws/notes",
+        },
+    },
+
+    daily_notes = {
+        folder = "daily",
+        date_format = "%Y-%m-%d",
+    },
+
+    templates = {
+        subdir = "templates",
+        date_format = "%Y-%m-%d-%a",
+        time_format = "%H:%M",
+    },
 })
 
 vim.keymap.set("n", "<leader>oo", "<cmd>ObsidianOpen<cr>", { silent = true })

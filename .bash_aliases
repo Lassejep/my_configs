@@ -1,9 +1,5 @@
-alias vi="nvim"
 alias vim="nvim"
-
-alias virc="cd ~/.config/nvim && nvim ."
 alias vimrc="cd ~/.config/nvim && nvim ."
-alias nvimrc="cd ~/.config/nvim && nvim ."
 
 alias makepkg="makepkg -si"
 

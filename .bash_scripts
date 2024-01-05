@@ -12,10 +12,6 @@ function code () {
   fi
 }
 
-function cl () {
-  cd "$@" && la
-}
-
 function ws () {
   cd ~/ws/"$@" && la
 }

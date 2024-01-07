@@ -50,17 +50,17 @@
         "separate-outputs": true
     },
 
-    // Updates Count
-    "custom/updates": {
-        "format": "  {}",
+    // Headset Battery
+    "custom/battery": {
+        "format": " {alt}",
         "tooltip-format": "{}",
+        "format-alt": "Battery: {}",
         "escape": true,
-        "return-type": "json",       
-        "exec": "~/git/my_configs/scripts/updates.sh",
-        "restart-interval": 60,
-        "on-click": "kitty -e ~/git/my_configs/scripts/installupdates.sh",
-        "tooltip": false
+        "return-type": "json",
+        "exec": "~/git/my_configs/waybar/scripts/headsetbattery.sh",
+        "restart-interval": 30,
     },
+
     
     // Wallpaper
     "custom/wallpaper": {

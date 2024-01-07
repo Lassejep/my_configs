@@ -185,10 +185,10 @@ window#waybar.empty #window {
 }
 
 /* -----------------------------------------------------
- * Custom Updates
+ * Custom Battery
  * ----------------------------------------------------- */
 
-#custom-updates {
+#custom-battery {
     background-color: @backgroundlight;
     font-size: 16px;
     color: @textcolor2;
@@ -198,16 +198,16 @@ window#waybar.empty #window {
     opacity:0.8;
 }
 
-#custom-updates.green {
+#custom-battery.green {
     background-color: @backgroundlight;
 }
 
-#custom-updates.yellow {
+#custom-battery.yellow {
     background-color: #ff9a3c;
     color: #FFFFFF;
 }
 
-#custom-updates.red {
+#custom-battery.red {
     background-color: #dc2f2f;
     color: #FFFFFF;
 }

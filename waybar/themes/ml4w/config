@@ -48,7 +48,7 @@
     // Modules Right    
     "modules-right": [
         "keyboard-state",
-        "custom/updates",
+        "custom/battery",
         "pulseaudio",
         "group/hardware",
         "custom/exit",

@@ -19,14 +19,12 @@ case $1 in
     fi
     wal -q -i ~/git/wallpapers/$selected
     echo "Wallpaper $selected selected"
-    cp $wallpaper ~/.cache/current_wallpaper.jpg
   ;;
 
   # Randomly select wallpaper 
   *)
     wal -q -i ~/git/wallpapers/
     echo "Random wallpaper selected"
-    cp $wallpaper ~/.cache/current_wallpaper.jpg
   ;;
 
 esac
@@ -36,6 +34,11 @@ esac
 # ----------------------------------------------------- 
 source "$HOME/.cache/wal/colors.sh"
 echo "Wallpaper: $wallpaper"
+
+# ----------------------------------------------------- 
+# Copy selected wallpaper into .cache folder
+# ----------------------------------------------------- 
+cp $wallpaper ~/.cache/current_wallpaper.jpg
 
 # ----------------------------------------------------- 
 # get wallpaper iamge name

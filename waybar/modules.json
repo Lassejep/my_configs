@@ -119,8 +119,21 @@
     // Clock
     "clock": {
         "timezone": "Europe/Copenhagen",
+        "format-alt": "{:%Y-%m-%d}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "calendar": {
+            "weeks-pos": "left",
+            "on-scroll": 1,
+            "format": {
+                "weeks": "{:%V}",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
+            },
+        },
+
+        "actions": {
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down",
+        },
     },
 
     // CPU
@@ -143,20 +156,6 @@
         "on-click": "kitty -e htop"
     }, 
     
-    // Network
-    "network": {
-        "format": "{ifname}",
-        "format-wifi": "   {signalStrength}%",
-        "format-ethernet": "  {ipaddr}",
-        "format-disconnected": "Not connected", //An empty format will hide the module.
-        "tooltip-format": " {ifname} via {gwaddri}",
-        "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
-        "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
-        "tooltip-format-disconnected": "Disconnected",
-        "max-length": 50,
-        "on-click": "kitty -e nmtui"
-    },
-
     // Pulseaudio
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float

@@ -11,3 +11,5 @@ alias lla="ls -lah --color=auto"
 alias grep="rg --color=auto"
 
 alias activate="source .venv/bin/activate"
+
+alias google="firefox --new-window --search"

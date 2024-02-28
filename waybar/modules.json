@@ -87,7 +87,7 @@
     // Filemanager Launcher
     "custom/filemanager": {
         "format": "",
-        "on-click": "thunar",
+        "on-click": "kitty -e lf",
         "tooltip": false
     },
 

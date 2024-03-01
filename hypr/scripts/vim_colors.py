@@ -3,8 +3,10 @@
 import pynvim
 import os
 
-for file in os.listdir('/run/user/1000'):
+# use :echo v:servername in nvim to get the socket path
+socket_path = '/run/user/1001/'
+for file in os.listdir(socket_path):
     if file.startswith('nvim'):
-        nvim = pynvim.attach('socket', path='/run/user/1000/' + file)
+        nvim = pynvim.attach('socket', path= socket_path + file)
         nvim.command('colorscheme pywal')
         nvim.command('highlight StatusLine guifg=#c0c0c0')

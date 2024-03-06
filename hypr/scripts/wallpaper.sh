@@ -39,6 +39,7 @@ echo "Wallpaper: $wallpaper"
 # Copy selected wallpaper into .cache folder
 # ----------------------------------------------------- 
 cp $wallpaper ~/.cache/current_wallpaper.jpg
+cp $wallpaper ~/.cache/lockscreen.png
 
 # ----------------------------------------------------- 
 # get wallpaper iamge name

@@ -26,3 +26,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(zoxide init --cmd cd bash)"
+
+# Created by `pipx` on 2024-03-07 06:33:50
+export PATH="$PATH:/home/tinspring/.local/bin"

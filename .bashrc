@@ -3,8 +3,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+export XDG_CONFIG_HOME=$HOME/.config
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-    tmux new
+    tmux attach -t default || tmux new -s default
 fi
 
 # set locale

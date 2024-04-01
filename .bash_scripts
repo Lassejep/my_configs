@@ -1,17 +1,25 @@
 #!/bin/bash
 
-function code () {
-  tmux has-session -t $1 2>/dev/null
+function ws () {
+    tmux has-session -t $1 2>/dev/null
 
-  if [[ -n "${TMUX}" && $? = 0 ]]; then
-    tmux switch -t $1
-  elif [[ -n "${TMUX}" && $? != 0 ]]; then
-    tmux new-session -s $1 -d && tmux switch -t $1
-  else
-    tmux new-session -A -s $1
-  fi
+    if [[ -n "${TMUX}" && $? = 0 ]]; then
+        echo "Attaching to session $1"
+        tmux switch -t $1
+    elif [[ -n "${TMUX}" && $? != 0 ]]; then
+        echo "Creating session $1"
+        tmux new-session -s $1 -d && tmux switch -t $1
+        tload $1
+    else
+        echo "Starting tmux and attaching to session $1"
+        tmux new-session -A -s $1
+        tload $1
+    fi
 }
 
-function ws () {
-  cd ~/ws/"$@" && la
+function tload () {
+    if [[ -f "${XDG_CONFIG_HOME}/tmux/templates/${1}.bash" ]]; then
+        echo "Loading template ${1}"
+        ${XDG_CONFIG_HOME}/tmux/templates/${1}.bash
+    fi
 }

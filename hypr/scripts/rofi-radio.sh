@@ -9,6 +9,7 @@ menu(){
 	printf "1. Lofi Girl <lofi>\n"
     printf "2. Theprimeagen <stream>\n"
     printf "3. DR P1 <radio>\n"
+    printf "4. PirateSoftware <stream>\n"
 }
 
 main() {
@@ -31,6 +32,12 @@ main() {
             notification "DR P1";
             URL="https://live-icy.gslb01.dr.dk/A/A03H.mp3"
             additional_args=""
+            break
+            ;;
+        4)
+            notification "PirateSoftware Stream";
+            URL="https://www.twitch.tv/piratesoftware"
+            ADDITIONAL_ARGS=""
             break
             ;;
 

@@ -34,6 +34,11 @@ require("lazy").setup({
     'hrsh7th/nvim-cmp',
     dependencies = 'L3MON4D3/LuaSnip'
   },
+  { 
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    priority = 1000,
+  },
   'nvim-lua/plenary.nvim',
   'nvim-treesitter/playground',
   'theprimeagen/harpoon',

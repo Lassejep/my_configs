@@ -1,17 +1,21 @@
 session=ljk
 
-tmux rename-window -t ${session}:1 "ljk"
-tmux split-window -h -t ${session}:${session}
-tmux send-keys -t ${session}:ljk.1 'cd ~/ws/ljk && clear' C-m
-tmux send-keys -t ${session}:ljk.2 'cd ~/ws/ljk_server && clear' C-m
-tmux select-pane -t ${session}:ljk.1
+tmux rename-window -t ${session}:1 "client"
+tmux split-window -v -t ${session}:client.1 -l 8
+tmux split-window -h -t ${session}:client.1
+tmux send-keys -t ${session}:client.1 'cd ~/ws/ljk && nvim .' C-m
+tmux send-keys -t ${session}:client.2 'cd ~/ws/ljk && nvim .' C-m
+tmux send-keys -t ${session}:client.3 'cd ~/ws/ljk && clear' C-m
+tmux select-pane -t ${session}:client.1
 
-tmux new-window -t ${session} -n "programs"
-tmux split-window -h -t ${session}:programs
-tmux send-keys -t ${session}:programs.1 'cd ~/ws/ljk && clear' C-m
-tmux send-keys -t ${session}:programs.1 './ljkey.py'
-tmux send-keys -t ${session}:programs.2 'cd ~/ws/ljk_server && clear' C-m
-tmux send-keys -t ${session}:programs.2 './server.py'
-tmux select-pane -t ${session}:programs.1
+tmux new-window -t ${session}:2 -n "server"
+tmux split-window -v -t ${session}:server.1 -l 8
+tmux split-window -h -t ${session}:server.1
+tmux send-keys -t ${session}:server.1 'cd ~/ws/ljk_server && nvim .' C-m
+tmux send-keys -t ${session}:server.2 'cd ~/ws/ljk_server && nvim .' C-m
+tmux send-keys -t ${session}:server.3 'cd ~/ws/ljk_server && clear' C-m
+tmux select-pane -t ${session}:server.1
 
-tmux select-window -t ${session}:ljk
+tmux new-window -t ${session}:3 -n "misc"
+
+tmux select-window -t ${session}:1

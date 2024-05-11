@@ -65,7 +65,6 @@ swww img $wallpaper \
   --transition-duration=0.7 \
   --transition-pos "$( hyprctl cursorpos )"
 
-~/git/my_configs/hypr/scripts/vim_colors.py
 pywalfox update
 pywal-discord update
 

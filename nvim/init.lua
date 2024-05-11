@@ -267,12 +267,9 @@ require("lazy").setup({
 		"echasnovski/mini.nvim",
 		config = function()
 			require("mini.ai").setup({ n_lines = 500 })
-
 			require("mini.surround").setup()
-
 			local statusline = require("mini.statusline")
 			statusline.setup({ use_icons = vim.g.have_nerd_font })
-
 			statusline.section_location = function()
 				return "%2l:%-2v"
 			end
@@ -552,6 +549,33 @@ require("lazy").setup({
 		config = function()
 			require("scrollEOF").setup()
 		end,
+	},
+	-- Better File Explorer
+	{
+		"stevearc/oil.nvim",
+		opts = {
+			default_file_explorer = true,
+			view_options = {
+				show_hidden = true,
+			},
+			use_default_keymaps = false,
+			keymaps = {
+				["g?"] = "actions.show_help",
+				["<CR>"] = "actions.select",
+				["<C-p>"] = "actions.preview",
+				["<C-c>"] = "actions.close",
+				["<leader>r"] = "actions.refresh",
+				["-"] = "actions.parent",
+				["_"] = "actions.open_cwd",
+				["`"] = "actions.cd",
+				["~"] = "actions.tcd",
+				["gs"] = "actions.change_sort",
+				["gx"] = "actions.open_external",
+				["g."] = "actions.toggle_hidden",
+				["g\\"] = "actions.toggle_trash",
+			},
+		},
+		dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
 }, {
 	ui = {

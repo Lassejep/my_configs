@@ -1,7 +1,6 @@
 session=ljk
 
 tmux rename-window -t ${session}:1 "client"
-tmux split-window -v -t ${session}:client.1 -l 8
 tmux split-window -h -t ${session}:client.1
 tmux send-keys -t ${session}:client.1 'cd ~/ws/ljk && nvim ljkey.py' C-m
 tmux send-keys -t ${session}:client.2 'cd ~/ws/ljk && clear' C-m
